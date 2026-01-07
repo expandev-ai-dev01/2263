@@ -45,6 +45,15 @@ export {
   estatisticasTempoObter,
 } from './tempoEstudo';
 
+export {
+  disciplinaCreate,
+  disciplinaList,
+  disciplinaGet,
+  disciplinaUpdate,
+  disciplinaDelete,
+  disciplinaHierarchyMove,
+} from './disciplina';
+
 export type {
   MaterialDidaticoEntity,
   MaterialDidaticoCreateRequest,
@@ -94,6 +103,15 @@ export type {
 } from './tempoEstudo';
 
 export type {
+  DisciplinaEntity,
+  DisciplinaCreateRequest,
+  DisciplinaUpdateRequest,
+  DisciplinaListResponse,
+  DisciplinaDeleteRequest,
+  DisciplinaHierarchyMoveRequest,
+} from './disciplina';
+
+export type {
   CreateInput as MaterialDidaticoCreateInput,
   UpdateInput as MaterialDidaticoUpdateInput,
   ParamsInput as MaterialDidaticoParamsInput,
@@ -127,3 +145,11 @@ export type {
   EstatisticasTempoInput,
   ParamsInput as TempoEstudoParamsInput,
 } from './tempoEstudo/tempoEstudoValidation';
+
+export type {
+  CreateInput as DisciplinaCreateInput,
+  UpdateInput as DisciplinaUpdateInput,
+  ParamsInput as DisciplinaParamsInput,
+  DeleteInput as DisciplinaDeleteInput,
+  HierarchyMoveInput as DisciplinaHierarchyMoveInput,
+} from './disciplina/disciplinaValidation';

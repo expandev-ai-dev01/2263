@@ -18,6 +18,9 @@ const ProgressoEstudosPage = lazy(() =>
 const TempoEstudoPage = lazy(() =>
   import('@/pages/TempoEstudo').then((module) => ({ default: module.TempoEstudoPage }))
 );
+const DisciplinaPage = lazy(() =>
+  import('@/pages/Disciplina').then((module) => ({ default: module.DisciplinaPage }))
+);
 const NotFoundPage = lazy(() =>
   import('@/pages/NotFound').then((module) => ({ default: module.NotFoundPage }))
 );
@@ -94,6 +97,20 @@ const routes = createBrowserRouter([
             }
           >
             <TempoEstudoPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'disciplina',
+        element: (
+          <Suspense
+            fallback={
+              <div className="flex h-full w-full items-center justify-center">
+                <LoadingSpinner />
+              </div>
+            }
+          >
+            <DisciplinaPage />
           </Suspense>
         ),
       },

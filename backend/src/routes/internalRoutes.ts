@@ -15,6 +15,7 @@ import * as tempoEstudoRegistroManualController from '@/api/internal/tempo-estud
 import * as tempoEstudoHistoricoController from '@/api/internal/tempo-estudo/historico/controller';
 import * as tempoEstudoEstatisticasController from '@/api/internal/tempo-estudo/estatisticas/controller';
 import * as tempoEstudoSessaoAutomaticaController from '@/api/internal/tempo-estudo/sessao-automatica/controller';
+import * as disciplinaController from '@/api/internal/disciplina/controller';
 
 const router = Router();
 
@@ -85,5 +86,16 @@ router.get('/tempo-estudo/historico', tempoEstudoHistoricoController.obterHandle
 router.get('/tempo-estudo/estatisticas', tempoEstudoEstatisticasController.obterHandler);
 
 router.put('/tempo-estudo/sessao-automatica', tempoEstudoSessaoAutomaticaController.editarHandler);
+
+/**
+ * @rule {be-route-configuration}
+ * Disciplina routes - /api/internal/disciplina
+ */
+router.get('/disciplina', disciplinaController.listHandler);
+router.post('/disciplina', disciplinaController.createHandler);
+router.get('/disciplina/:id', disciplinaController.getHandler);
+router.put('/disciplina/:id', disciplinaController.updateHandler);
+router.delete('/disciplina/:id', disciplinaController.deleteHandler);
+router.put('/disciplina/:id/move', disciplinaController.moveHandler);
 
 export default router;

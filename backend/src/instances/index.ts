@@ -36,3 +36,8 @@ export {
   type PausaRecord,
   type RegistroManualRecord,
 } from './tempoEstudo';
+
+/**
+ * Disciplina instances
+ */
+export { disciplinaStore, type DisciplinaRecord } from './disciplina';

@@ -95,3 +95,13 @@ export {
   type MotivoInterrupcao,
   type MotivoEdicao,
 } from './tempoEstudo';
+
+/**
+ * Disciplina constants
+ */
+export {
+  DISCIPLINA_DEFAULTS,
+  DISCIPLINA_LIMITS,
+  type DisciplinaDefaultsType,
+  type DisciplinaLimitsType,
+} from './disciplina';
