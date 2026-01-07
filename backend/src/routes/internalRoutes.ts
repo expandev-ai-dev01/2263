@@ -8,6 +8,7 @@
 
 import { Router } from 'express';
 import * as materialDidaticoController from '@/api/internal/material-didatico/controller';
+import * as metaDiariaController from '@/api/internal/meta-diaria/controller';
 
 const router = Router();
 
@@ -20,5 +21,16 @@ router.post('/material-didatico', materialDidaticoController.createHandler);
 router.get('/material-didatico/:id', materialDidaticoController.getHandler);
 router.put('/material-didatico/:id', materialDidaticoController.updateHandler);
 router.delete('/material-didatico/:id', materialDidaticoController.deleteHandler);
+
+/**
+ * @rule {be-route-configuration}
+ * MetaDiaria routes - /api/internal/meta-diaria
+ */
+router.get('/meta-diaria', metaDiariaController.listHandler);
+router.post('/meta-diaria', metaDiariaController.createHandler);
+router.get('/meta-diaria/:id', metaDiariaController.getHandler);
+router.put('/meta-diaria/:id', metaDiariaController.updateHandler);
+router.delete('/meta-diaria/:id', metaDiariaController.deleteHandler);
+router.post('/meta-diaria/:id/duplicate', metaDiariaController.duplicateHandler);
 
 export default router;

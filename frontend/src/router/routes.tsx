@@ -9,6 +9,9 @@ const HomePage = lazy(() =>
 const MaterialDidaticoPage = lazy(() =>
   import('@/pages/MaterialDidatico').then((module) => ({ default: module.MaterialDidaticoPage }))
 );
+const MetaDiariaPage = lazy(() =>
+  import('@/pages/MetaDiaria').then((module) => ({ default: module.MetaDiariaPage }))
+);
 const NotFoundPage = lazy(() =>
   import('@/pages/NotFound').then((module) => ({ default: module.NotFoundPage }))
 );
@@ -43,6 +46,20 @@ const routes = createBrowserRouter([
             }
           >
             <MaterialDidaticoPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'meta-diaria',
+        element: (
+          <Suspense
+            fallback={
+              <div className="flex h-full w-full items-center justify-center">
+                <LoadingSpinner />
+              </div>
+            }
+          >
+            <MetaDiariaPage />
           </Suspense>
         ),
       },

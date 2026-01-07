@@ -10,3 +10,8 @@
  * MaterialDidatico instances
  */
 export { materialDidaticoStore, type MaterialDidaticoRecord } from './materialDidatico';
+
+/**
+ * MetaDiaria instances
+ */
+export { metaDiariaStore, type MetaDiariaRecord } from './metaDiaria';
