@@ -15,3 +15,14 @@ export { materialDidaticoStore, type MaterialDidaticoRecord } from './materialDi
  * MetaDiaria instances
  */
 export { metaDiariaStore, type MetaDiariaRecord } from './metaDiaria';
+
+/**
+ * ProgressoEstudos instances
+ */
+export {
+  progressoEstudosStore,
+  type ConteudoConcluidoRecord,
+  type SessaoEstudoRecord,
+  type PreferenciasNotificacaoRecord,
+  type NotificacaoMarcoRecord,
+} from './progressoEstudos';

@@ -9,6 +9,7 @@
 import { Router } from 'express';
 import * as materialDidaticoController from '@/api/internal/material-didatico/controller';
 import * as metaDiariaController from '@/api/internal/meta-diaria/controller';
+import * as progressoEstudosController from '@/api/internal/progresso-estudos/controller';
 
 const router = Router();
 
@@ -32,5 +33,28 @@ router.get('/meta-diaria/:id', metaDiariaController.getHandler);
 router.put('/meta-diaria/:id', metaDiariaController.updateHandler);
 router.delete('/meta-diaria/:id', metaDiariaController.deleteHandler);
 router.post('/meta-diaria/:id/duplicate', metaDiariaController.duplicateHandler);
+
+/**
+ * @rule {be-route-configuration}
+ * ProgressoEstudos routes - /api/internal/progresso-estudos
+ */
+router.post('/progresso-estudos/dashboard', progressoEstudosController.dashboardHandler);
+router.post(
+  '/progresso-estudos/estatisticas-tempo',
+  progressoEstudosController.estatisticasTempoHandler
+);
+router.post(
+  '/progresso-estudos/grafico-evolucao',
+  progressoEstudosController.graficoEvolucaoHandler
+);
+router.post('/progresso-estudos/relatorio', progressoEstudosController.relatorioHandler);
+router.put(
+  '/progresso-estudos/preferencias-notificacao',
+  progressoEstudosController.preferenciasNotificacaoHandler
+);
+router.post(
+  '/progresso-estudos/comparacao-periodos',
+  progressoEstudosController.comparacaoPeriodosHandler
+);
 
 export default router;

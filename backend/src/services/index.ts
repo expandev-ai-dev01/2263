@@ -23,6 +23,15 @@ export {
   metaDiariaDuplicate,
 } from './metaDiaria';
 
+export {
+  dashboardProgressoGet,
+  estatisticasTempoGet,
+  graficoEvolucaoGet,
+  relatorioProgressoGenerate,
+  preferenciasNotificacaoUpdate,
+  comparacaoPeriodosGet,
+} from './progressoEstudos';
+
 export type {
   MaterialDidaticoEntity,
   MaterialDidaticoCreateRequest,
@@ -39,6 +48,22 @@ export type {
 } from './metaDiaria';
 
 export type {
+  DashboardProgressoGeral,
+  EstatisticasTempoEstudo,
+  GraficoEvolucao,
+  AcompanhamentoMetas,
+  RelatorioProgresso,
+  PreferenciasNotificacao,
+  ComparacaoPeriodos,
+  DashboardProgressoRequest,
+  EstatisticasTempoRequest,
+  GraficoEvolucaoRequest,
+  RelatorioProgressoRequest,
+  PreferenciasNotificacaoRequest,
+  ComparacaoPeriodosRequest,
+} from './progressoEstudos';
+
+export type {
   CreateInput as MaterialDidaticoCreateInput,
   UpdateInput as MaterialDidaticoUpdateInput,
   ParamsInput as MaterialDidaticoParamsInput,
@@ -50,3 +75,12 @@ export type {
   ParamsInput as MetaDiariaParamsInput,
   DuplicateInput as MetaDiariaDuplicateInput,
 } from './metaDiaria/metaDiariaValidation';
+
+export type {
+  DashboardRequestInput,
+  EstatisticasTempoRequestInput,
+  GraficoEvolucaoRequestInput,
+  RelatorioProgressoRequestInput,
+  PreferenciasNotificacaoRequestInput,
+  ComparacaoPeriodosRequestInput,
+} from './progressoEstudos/progressoEstudosValidation';
