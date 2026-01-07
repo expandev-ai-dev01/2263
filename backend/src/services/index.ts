@@ -32,6 +32,19 @@ export {
   comparacaoPeriodosGet,
 } from './progressoEstudos';
 
+export {
+  sessaoIniciar,
+  sessaoFinalizar,
+  sessaoPausar,
+  sessaoRetomar,
+  registroManualCriar,
+  registroManualAtualizar,
+  registroManualDeletar,
+  sessaoAutomaticaEditar,
+  historicoSessoesObter,
+  estatisticasTempoObter,
+} from './tempoEstudo';
+
 export type {
   MaterialDidaticoEntity,
   MaterialDidaticoCreateRequest,
@@ -64,6 +77,23 @@ export type {
 } from './progressoEstudos';
 
 export type {
+  SessaoEstudoEntity,
+  PausaEntity,
+  RegistroManualEntity,
+  HistoricoSessaoItem,
+  EstatisticasTempoResponse,
+  IniciarSessaoRequest,
+  FinalizarSessaoRequest,
+  PausarSessaoRequest,
+  RetomarSessaoRequest,
+  CriarRegistroManualRequest,
+  AtualizarRegistroManualRequest,
+  EditarSessaoAutomaticaRequest,
+  HistoricoSessoesRequest,
+  EstatisticasTempoRequest as TempoEstudoEstatisticasRequest,
+} from './tempoEstudo';
+
+export type {
   CreateInput as MaterialDidaticoCreateInput,
   UpdateInput as MaterialDidaticoUpdateInput,
   ParamsInput as MaterialDidaticoParamsInput,
@@ -84,3 +114,16 @@ export type {
   PreferenciasNotificacaoRequestInput,
   ComparacaoPeriodosRequestInput,
 } from './progressoEstudos/progressoEstudosValidation';
+
+export type {
+  IniciarSessaoInput,
+  FinalizarSessaoInput,
+  PausarSessaoInput,
+  RetomarSessaoInput,
+  CriarRegistroManualInput,
+  AtualizarRegistroManualInput,
+  EditarSessaoAutomaticaInput,
+  HistoricoSessoesInput,
+  EstatisticasTempoInput,
+  ParamsInput as TempoEstudoParamsInput,
+} from './tempoEstudo/tempoEstudoValidation';

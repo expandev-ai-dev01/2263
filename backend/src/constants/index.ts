@@ -78,3 +78,20 @@ export {
   type StatusEnvio,
   type PeriodoComparacao,
 } from './progressoEstudos';
+
+/**
+ * TempoEstudo constants
+ */
+export {
+  TEMPO_ESTUDO_DEFAULTS,
+  STATUS_SESSAO,
+  MOTIVO_INTERRUPCAO,
+  MOTIVO_EDICAO,
+  type TempoEstudoDefaultsType,
+  type StatusSessaoType,
+  type MotivoInterrupcaoType,
+  type MotivoEdicaoType,
+  type StatusSessao,
+  type MotivoInterrupcao,
+  type MotivoEdicao,
+} from './tempoEstudo';

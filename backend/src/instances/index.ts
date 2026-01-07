@@ -26,3 +26,13 @@ export {
   type PreferenciasNotificacaoRecord,
   type NotificacaoMarcoRecord,
 } from './progressoEstudos';
+
+/**
+ * TempoEstudo instances
+ */
+export {
+  tempoEstudoStore,
+  type SessaoEstudoRecord as TempoEstudoSessaoRecord,
+  type PausaRecord,
+  type RegistroManualRecord,
+} from './tempoEstudo';

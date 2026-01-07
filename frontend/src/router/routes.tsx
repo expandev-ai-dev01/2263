@@ -15,6 +15,9 @@ const MetaDiariaPage = lazy(() =>
 const ProgressoEstudosPage = lazy(() =>
   import('@/pages/ProgressoEstudos').then((module) => ({ default: module.ProgressoEstudosPage }))
 );
+const TempoEstudoPage = lazy(() =>
+  import('@/pages/TempoEstudo').then((module) => ({ default: module.TempoEstudoPage }))
+);
 const NotFoundPage = lazy(() =>
   import('@/pages/NotFound').then((module) => ({ default: module.NotFoundPage }))
 );
@@ -77,6 +80,20 @@ const routes = createBrowserRouter([
             }
           >
             <ProgressoEstudosPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'tempo-estudo',
+        element: (
+          <Suspense
+            fallback={
+              <div className="flex h-full w-full items-center justify-center">
+                <LoadingSpinner />
+              </div>
+            }
+          >
+            <TempoEstudoPage />
           </Suspense>
         ),
       },
