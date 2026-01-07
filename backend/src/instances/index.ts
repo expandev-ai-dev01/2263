@@ -6,4 +6,7 @@
  * @module instances
  */
 
-
+/**
+ * MaterialDidatico instances
+ */
+export { materialDidaticoStore, type MaterialDidaticoRecord } from './materialDidatico';

@@ -1,2 +1,2 @@
 // Domain modules export
-export {};
+export * as materialDidatico from './material-didatico/_module';
